@@ -20,7 +20,7 @@ $user = $this->user_model->user_detail($user_id); ?>
                     <div class="row">
                         <div class="col-8">
                             <h4>Rp. <?php echo number_format($user->saldo_driver, 0, ",", "."); ?></h4>
-                            <p><a class="text-muted" href="<?php echo base_url('driver/saldo'); ?>">Saldo</a></p>
+                            <p><a class="text-white" href="<?php echo base_url('driver/saldo'); ?>">Saldo</a></p>
                         </div>
                         <div class="col-4">
                             <span style="font-size: 40px;">
