@@ -87,9 +87,6 @@ $user = $this->user_model->user_detail($user_id); ?>
                         <div class="col-12">
                             <a href="<?php echo base_url('driver/transaksi/terima/' . $data->id); ?>" class="btn btn-success btn-block">Terima</a>
                         </div>
-                        <div class="col-6">
-                            <a href="<?php echo base_url('driver/transaksi/tolak/' . $data->id); ?>" class="btn btn-danger btn-block">Tolak</a>
-                        </div>
                     </div>
                 </div>
             </div>
