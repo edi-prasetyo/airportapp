@@ -20,7 +20,7 @@ $user = $this->user_model->user_detail($user_id); ?>
                     <div class="row">
                         <div class="col-8">
                             <h4>Rp. <?php echo number_format($user->saldo_driver, 0, ",", "."); ?></h4>
-                            <p>Saldo</p>
+                            <p><a class="text-muted" href="<?php echo base_url('driver/saldo'); ?>">Saldo</a></p>
                         </div>
                         <div class="col-4">
                             <span style="font-size: 40px;">
@@ -84,12 +84,12 @@ $user = $this->user_model->user_detail($user_id); ?>
                     <?php endif; ?>
                     </div>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12">
                             <a href="<?php echo base_url('driver/transaksi/terima/' . $data->id); ?>" class="btn btn-success btn-block">Terima</a>
                         </div>
-                        <div class="col-6">
+                        <!-- <div class="col-6">
                             <a href="<?php echo base_url('driver/transaksi/tolak/' . $data->id); ?>" class="btn btn-danger btn-block">Tolak</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
