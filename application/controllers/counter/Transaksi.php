@@ -117,7 +117,7 @@ class Transaksi extends CI_Controller
                 'start_price'                       => $product->start_price,
                 'total_price'                       => $total_price,
                 'stage'                             => 1,
-                'status'                            => 'Mencari Pengemudi',
+                'status'                            => 'Belum dikirim ke driver',
                 'date_created'                      => date('Y-m-d H:i:s'),
                 'date_updated'                      => date('Y-m-d H:i:s')
             ];
