@@ -10,13 +10,6 @@ echo validation_errors('<div class="alert alert-warning">', '</div>');
 
 
 
-
-
-
-
-
-
-
     <div class="card-header">
         <ul class="nav nav-pills ml-auto p-2">
             <li class="nav-item"><a class="nav-link " href="<?php echo base_url('admin/transaksi'); ?>">Transaksi Baru</a></li>
@@ -85,6 +78,9 @@ echo validation_errors('<div class="alert alert-warning">', '</div>');
                         <a href="<?php echo base_url('admin/transaksi/detail/' . $transaksi->id); ?>" class="btn btn-success btn-sm">
                             <i class="fa fa-eye"></i> Detail
                         </a>
+                        <!-- <a href="<?php echo base_url('admin/transaksi/detail/' . $transaksi->id); ?>" class="btn btn-success btn-sm">
+                            <i class="fa fa-eye"></i> Selesaikan
+                        </a> -->
 
                         <?php //include "cancel.php"; 
                         ?>

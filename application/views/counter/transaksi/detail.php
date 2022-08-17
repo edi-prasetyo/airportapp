@@ -41,6 +41,10 @@
             <table class="table table-borderless">
                 <tbody>
                     <tr>
+                        <td>Sales</td>
+                        <td class="text-right"><?php echo $transaksi->name; ?> Km</td>
+                    </tr>
+                    <tr>
                         <td>Jarak</td>
                         <td class="text-right"><?php echo $transaksi->jarak; ?> Km</td>
                     </tr>
