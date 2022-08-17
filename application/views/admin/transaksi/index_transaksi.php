@@ -61,11 +61,11 @@ echo validation_errors('<div class="alert alert-warning">', '</div>');
                     <td>
                         <?php if ($transaksi->stage == 1) : ?>
                             <div class="badge badge-primary">Belum Dikirim Ke Driver</div>
-                        <?php elseif ($transaksi->status == 2) : ?>
+                        <?php elseif ($transaksi->stage == 2) : ?>
                             <div class="badge badge-info">Menunggu Konfirmasi Driver</div>
-                        <?php elseif ($transaksi->status == 3) : ?>
+                        <?php elseif ($transaksi->stage == 3) : ?>
                             <div class="badge badge-success">Dalam Perjalanan</div>
-                        <?php elseif ($transaksi->status == 4) : ?>
+                        <?php elseif ($transaksi->stage == 4) : ?>
                             <div class="badge badge-success">Selesai</div>
                         <?php else : ?>
                             <div class="badge badge-danger"></div>
