@@ -103,7 +103,7 @@ class transaksi extends CI_Controller
     $main_agen = $this->user_model->get_allcounter();
     $config['base_url']         = base_url('admin/transaksi/selesai/index/');
     $config['total_rows']       = count($this->transaksi_model->total_row_selesai());
-    $config['per_page']         = 10;
+    $config['per_page']         = 5;
     $config['uri_segment']      = 5;
     $config['first_link']       = 'First';
     $config['last_link']        = 'Last';
@@ -147,7 +147,7 @@ class transaksi extends CI_Controller
     $config['base_url']         = base_url('admin/transaksi/tolak/index/');
     $config['total_rows']       = count($this->transaksi_model->total_row_tolak());
     $config['per_page']         = 10;
-    $config['uri_segment']      = 5;
+    $config['uri_segment']      = 6;
     $config['first_link']       = 'First';
     $config['last_link']        = 'Last';
     $config['next_link']        = 'Next';
@@ -167,7 +167,7 @@ class transaksi extends CI_Controller
     $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
     $config['last_tagl_close']  = '</span></li>';
     $limit                      = $config['per_page'];
-    $start                      = ($this->uri->segment(5)) ? ($this->uri->segment(5)) : 0;
+    $start                      = ($this->uri->segment(6)) ? ($this->uri->segment(6)) : 0;
     $this->pagination->initialize($config);
     $transaksi = $this->transaksi_model->get_transaksi_tolak($limit, $start);
     $data = [

@@ -120,6 +120,8 @@ class Transaksi_model extends CI_Model
 
     $this->db->select('transaksi.*, user.name');
     $this->db->from('transaksi');
+    $this->db->where('stage', 1);
+    $this->db->where('stage', 2);
     // Join
     $this->db->join('user', 'user.id = transaksi.user_id', 'LEFT');
     //End Join
@@ -133,6 +135,7 @@ class Transaksi_model extends CI_Model
 
     $this->db->select('transaksi.*, user.name');
     $this->db->from('transaksi');
+    $this->db->where('stage', 3);
     // Join
     $this->db->join('user', 'user.id = transaksi.user_id', 'LEFT');
     //End Join
@@ -146,6 +149,7 @@ class Transaksi_model extends CI_Model
 
     $this->db->select('transaksi.*, user.name');
     $this->db->from('transaksi');
+    $this->db->where('stage', 4);
     // Join
     $this->db->join('user', 'user.id = transaksi.user_id', 'LEFT');
     //End Join
@@ -159,6 +163,7 @@ class Transaksi_model extends CI_Model
 
     $this->db->select('transaksi.*, user.name');
     $this->db->from('transaksi');
+    $this->db->where('stage', 5);
     // Join
     $this->db->join('user', 'user.id = transaksi.user_id', 'LEFT');
     //End Join
