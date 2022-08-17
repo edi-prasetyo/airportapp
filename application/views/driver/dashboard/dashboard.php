@@ -76,9 +76,9 @@ $user = $this->user_model->user_detail($user_id); ?>
             <div class="card">
                 <div class="card-header row">
                     <div class="col-6">
-                        <?php echo date('j M Y', strtotime($transaksi->date_created)); ?> - <?php echo date('H:i:s', strtotime($transaksi->date_created)); ?>
+                        <?php echo date('j M Y', strtotime($data->date_created)); ?> - <?php echo date('H:i:s', strtotime($data->date_created)); ?>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 text-right">
                         <?php echo $data->order_id; ?>
                     </div>
                 </div>
