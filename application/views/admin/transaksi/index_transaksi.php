@@ -56,7 +56,8 @@ echo validation_errors('<div class="alert alert-warning">', '</div>');
                     <td><?php echo $transaksi->order_id; ?></td>
                     <td><?php echo date('d/m/Y', strtotime($transaksi->date_created)); ?> - <?php echo date('H:i:s', strtotime($transaksi->date_created)); ?></td>
                     <td><?php echo $transaksi->name; ?> </td>
-                    <td><?php echo $transaksi->driver_id; ?> - <?php echo $transaksi->driver_name; ?> </td>
+                    <td>
+                        <?php echo $transaksi->driver_id; ?> - <?php echo $transaksi->driver_name; ?> </td>
                     <td><?php echo $transaksi->destination; ?> </td>
                     <td>
                         <?php if ($transaksi->stage == 1) : ?>

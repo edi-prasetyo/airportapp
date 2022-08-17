@@ -1,4 +1,4 @@
-<?php
+total_omset_transaksi<?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller

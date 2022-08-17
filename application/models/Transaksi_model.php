@@ -68,23 +68,18 @@ class Transaksi_model extends CI_Model
     $query = $this->db->get();
     return $query->result();
   }
-  public function get_driver_name($limit, $start, $order_id)
-  {
+  // public function get_driver_name($driver_id)
+  // {
 
-    $this->db->select('transaksi.*, user.name');
-    $this->db->from('transaksi');
-    // join
-    $this->db->join('user', 'user.id = transaksi.driver_id', 'LEFT');
-    // End Join
-    $this->db->where('stage', 1);
-    $this->db->or_where('stage', 2);
-
-    $this->db->like('order_id', $order_id);
-    $this->db->order_by('transaksi.id', 'DESC');
-    $this->db->limit($limit, $start);
-    $query = $this->db->get();
-    return $query->result();
-  }
+  //   $this->db->select('transaksi.*, user.name');
+  //   $this->db->from('transaksi');
+  //   // join
+  //   $this->db->join('user', 'user.id = transaksi.driver_id', 'LEFT');
+  //   // End Join
+  //   $this->db->where('transaksi.driver_id', $driver_id);
+  //   $query = $this->db->get();
+  //   return $query->row();
+  // }
   public function get_transaksi_proses($limit, $start)
   {
 
@@ -300,7 +295,7 @@ class Transaksi_model extends CI_Model
   public function get_total_omset_transaksi()
   {
     $this->db->select_sum('total_price');
-    $this->db->where('status', 1);
+    $this->db->where('stage', 4);
     $query = $this->db->get('transaksi');
     if ($query->num_rows() > 0) {
       return $query->row()->total_price;

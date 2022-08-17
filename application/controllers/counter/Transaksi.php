@@ -186,7 +186,7 @@ class Transaksi extends CI_Controller
 
         $user_id = $this->input->post('driver_id');
         $user_driver = $this->user_model->user_detail($user_id);
-
+        $driver_name = $user_driver->name;
         // var_dump($user_driver);
         // die;
 
@@ -213,6 +213,7 @@ class Transaksi extends CI_Controller
                 $data = [
                     'id'                => $insert_id,
                     'driver_id'          => $user_id,
+                    'driver_name'       => $driver_name,
                     'stage'             => 2,
                 ];
                 $this->transaksi_model->update($data);

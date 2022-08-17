@@ -163,6 +163,19 @@ class User_model extends CI_Model
     $query = $this->db->get();
     return $query->row();
   }
+  public function get_driver_name($driver_id)
+  {
+    $this->db->select('user.*, user.name, user_role.role');
+    $this->db->from('user');
+    // join
+    $this->db->join('user_role', 'user_role.id = user.role_id', 'LEFT');
+    // End Join
+    $this->db->where(
+      ['user.id'    => $driver_id]
+    );
+    $query = $this->db->get();
+    return $query->row();
+  }
   public function update($data)
   {
     $this->db->where('id', $data['id']);
