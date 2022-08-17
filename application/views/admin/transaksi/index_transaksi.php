@@ -59,14 +59,16 @@ echo validation_errors('<div class="alert alert-warning">', '</div>');
                     <td><?php echo $transaksi->driver_id; ?> - <?php echo $transaksi->driver_name; ?> </td>
                     <td><?php echo $transaksi->destination; ?> </td>
                     <td>
-                        <?php if ($transaksi->status == 'Mencari Pengemudi') : ?>
-                            <div class="badge badge-primary"><?php echo $transaksi->status; ?></div>
-                        <?php elseif ($transaksi->status == 'Dalam Pengantaran') : ?>
-                            <div class="badge badge-info"><?php echo $transaksi->status; ?></div>
-                        <?php elseif ($transaksi->status == 'Selesai') : ?>
-                            <div class="badge badge-success"><?php echo $transaksi->status; ?></div>
+                        <?php if ($transaksi->stage == 1) : ?>
+                            <div class="badge badge-primary">Belum Dikirim Ke Driver</div>
+                        <?php elseif ($transaksi->status == 2) : ?>
+                            <div class="badge badge-info">Menunggu Konfirmasi Driver</div>
+                        <?php elseif ($transaksi->status == 3) : ?>
+                            <div class="badge badge-success">Dalam Perjalanan</div>
+                        <?php elseif ($transaksi->status == 4) : ?>
+                            <div class="badge badge-success">Selesai</div>
                         <?php else : ?>
-                            <div class="badge badge-danger"><?php echo $transaksi->status; ?></div>
+                            <div class="badge badge-danger"></div>
                         <?php endif; ?>
 
                     </td>
