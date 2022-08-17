@@ -103,7 +103,7 @@ class transaksi extends CI_Controller
     $main_agen = $this->user_model->get_allcounter();
     $config['base_url']         = base_url('admin/transaksi/selesai/index/');
     $config['total_rows']       = count($this->transaksi_model->total_row_selesai());
-    $config['per_page']         = 5;
+    $config['per_page']         = 10;
     $config['uri_segment']      = 5;
     $config['first_link']       = 'First';
     $config['last_link']        = 'Last';

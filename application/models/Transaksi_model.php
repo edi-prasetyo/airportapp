@@ -66,7 +66,7 @@ class Transaksi_model extends CI_Model
     $query = $this->db->get();
     return $query->result();
   }
-  public function get_transaksi_proses()
+  public function get_transaksi_proses($limit, $start)
   {
 
     $this->db->select('transaksi.*, user.name');
@@ -76,10 +76,11 @@ class Transaksi_model extends CI_Model
     // End Join
     $this->db->where('stage', 3);
     $this->db->order_by('transaksi.id', 'DESC');
+    $this->db->limit($limit, $start);
     $query = $this->db->get();
     return $query->result();
   }
-  public function get_transaksi_selesai()
+  public function get_transaksi_selesai($limit, $start)
   {
 
     $this->db->select('transaksi.*, user.name');
@@ -89,10 +90,11 @@ class Transaksi_model extends CI_Model
     // End Join
     $this->db->where('stage', 4);
     $this->db->order_by('transaksi.id', 'DESC');
+    $this->db->limit($limit, $start);
     $query = $this->db->get();
     return $query->result();
   }
-  public function get_transaksi_tolak()
+  public function get_transaksi_tolak($limit, $start)
   {
 
     $this->db->select('transaksi.*, user.name');
@@ -102,6 +104,7 @@ class Transaksi_model extends CI_Model
     // End Join
     $this->db->where('stage', 5);
     $this->db->order_by('transaksi.id', 'DESC');
+    $this->db->limit($limit, $start);
     $query = $this->db->get();
     return $query->result();
   }
