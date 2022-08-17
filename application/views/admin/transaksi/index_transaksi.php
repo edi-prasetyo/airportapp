@@ -60,11 +60,11 @@ echo validation_errors('<div class="alert alert-warning">', '</div>');
                     <td><?php echo $transaksi->destination; ?> </td>
                     <td>
                         <?php if ($transaksi->stage == 1) : ?>
-                            <div class="badge badge-primary">Belum Dikirim Ke Driver</div>
+                            <div class="badge badge-danger">Belum Dikirim Ke Driver</div>
                         <?php elseif ($transaksi->stage == 2) : ?>
                             <div class="badge badge-info">Menunggu Konfirmasi Driver</div>
                         <?php elseif ($transaksi->stage == 3) : ?>
-                            <div class="badge badge-success">Dalam Perjalanan</div>
+                            <div class="badge badge-primary">Dalam Perjalanan</div>
                         <?php elseif ($transaksi->stage == 4) : ?>
                             <div class="badge badge-success">Selesai</div>
                         <?php else : ?>

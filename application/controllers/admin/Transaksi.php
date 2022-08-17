@@ -45,10 +45,15 @@ class transaksi extends CI_Controller
     $start                      = ($this->uri->segment(4)) ? ($this->uri->segment(4)) : 0;
     $this->pagination->initialize($config);
     $transaksi = $this->transaksi_model->get_transaksi($limit, $start, $order_id);
+    $driver_name = $this->transaksi_model->get_driver_name($limit, $start, $order_id);
+
+
+
 
     $data = [
       'title'                 => 'Data Transaksi',
       'transaksi'             => $transaksi,
+      'driver_name'           => $driver_name,
       'pagination'            => $this->pagination->create_links(),
       'content'               => 'admin/transaksi/index_transaksi'
     ];

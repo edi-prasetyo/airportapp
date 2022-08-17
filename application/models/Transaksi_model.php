@@ -68,6 +68,23 @@ class Transaksi_model extends CI_Model
     $query = $this->db->get();
     return $query->result();
   }
+  public function get_driver_name($limit, $start, $order_id)
+  {
+
+    $this->db->select('transaksi.*, user.name');
+    $this->db->from('transaksi');
+    // join
+    $this->db->join('user', 'user.id = transaksi.driver_id', 'LEFT');
+    // End Join
+    $this->db->where('stage', 1);
+    $this->db->or_where('stage', 2);
+
+    $this->db->like('order_id', $order_id);
+    $this->db->order_by('transaksi.id', 'DESC');
+    $this->db->limit($limit, $start);
+    $query = $this->db->get();
+    return $query->result();
+  }
   public function get_transaksi_proses($limit, $start)
   {
 

@@ -42,7 +42,7 @@
                 <tbody>
                     <tr>
                         <td>Sales</td>
-                        <td class="text-right"><?php echo $transaksi->name; ?> Km</td>
+                        <td class="text-right"><?php echo $transaksi->name; ?></td>
                     </tr>
                     <tr>
                         <td>Jarak</td>
