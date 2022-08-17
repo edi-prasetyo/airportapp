@@ -60,6 +60,8 @@ class Transaksi_model extends CI_Model
     $this->db->join('user', 'user.id = transaksi.user_id', 'LEFT');
     // End Join
     $this->db->where('stage', 1);
+    $this->db->or_where('stage', 2);
+
     $this->db->like('order_id', $order_id);
     $this->db->order_by('transaksi.id', 'DESC');
     $this->db->limit($limit, $start);
@@ -124,7 +126,7 @@ class Transaksi_model extends CI_Model
     $this->db->select('transaksi.*, user.name');
     $this->db->from('transaksi');
     $this->db->where('stage', 1);
-    $this->db->where('stage', 2);
+    $this->db->or_where('stage', 2);
     // Join
     $this->db->join('user', 'user.id = transaksi.user_id', 'LEFT');
     //End Join

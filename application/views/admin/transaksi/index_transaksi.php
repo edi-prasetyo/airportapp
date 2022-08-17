@@ -7,16 +7,6 @@ echo validation_errors('<div class="alert alert-warning">', '</div>');
 
 ?>
 <div class="card">
-
-
-
-
-
-
-
-
-
-
     <div class="card-header">
         <ul class="nav nav-pills ml-auto p-2">
             <li class="nav-item"><a class="nav-link active" href="<?php echo base_url('admin/transaksi'); ?>">Transaksi Baru</a></li>
