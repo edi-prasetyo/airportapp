@@ -207,7 +207,7 @@ class Transaksi extends CI_Controller
                 'insert_id'         => $insert_id,
                 'content'           => 'counter/transaksi/selectdriver'
             ];
-            $this->load->view('counter/layout/wrapp', $data, FALSE);
+            $this->load->view('counter/transaksi/selectdriver', $data, FALSE);
         } else {
             if ($user_driver->status == 0 && $user_driver->saldo_driver >= 1) {
                 $data = [
